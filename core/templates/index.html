@@ -2,11 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="static/estilo.css">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="core/estilo.css">
 </head>
 <body>
-    <h1>Olá Mundo</h1>
+  <div class="container-inicio">
+    <header class="navigation">
+      <div class="imagm">
+        <img src="https://ead.ifrn.edu.br/portal/wp-content/uploads/2017/04/logo_IFRN_br.png" alt="50px" height="120px">
+      </div>
+      <details class="dropdown">
+        <summary role="button">
+          <a class="button">Categorias</a id="home">
+        </summary>
+        <ul>
+          <li><a href="#">Eletrônicos</a></li>
+          <li><a href="#">Roupas</a></li>
+          <li><a href="#">Acessórios</a></li>
+          <li><a href="#">Documentos</a></li>
+        </ul>
+      </details>
+      <div class="searchBox">
+        <input class="searchInput"type="text" name="" placeholder="Procurar...">
+        <button class="searchButton" href="#">
+          <i class="material-icons">Busca</i>
+        </button>
+      </div>
+      <div>
+        <figure>
+          <a href="administração_pag/administração.html"><img src="https://cdn-icons-png.flaticon.com/512/64/64572.png" alt="20px" height="57px" class="main-profile-img" />
+          </a>
+        </figure>
+      </div>
+      <div class="text-login">
+        <a class="button" href="tela_login.html">Login</a>
+      </div>
+    </header>
+    <main>
+      <nav>
+        <label for="touch"><span>ULTIMOS OBJETOS</span></label>               
+        <input type="checkbox" id="touch"> 
+        <ul class="slide">
+          <li><a href="tela_itens.html">Recentes</a></li> 
+          <li><a href="old_items.html">Antigos</a></li>
+        </ul>
+      </nav>
+      <div class="caixa-inicio">
+        <div class="caixa-left">
+            <img src="imagens/animação2.svg" class="left-login-img" alt="animação">
+        </div>
+        <div class="caixa-right">
+            <h1>Perdeu algum objeto no campus?</h1>
+            <h2>VEJA NO NOSSO SITE DE ACHADOS E PERDIDOS <br> SE ELE FOI ENCONTRADO.</h2>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="final">
+        <div>
+          <ul class="rodafeet">
+            <li class="links"><a href="https://suap.ifrn.edu.br/">Portal do SUAP </a></li><br>
+            <li class="links"><a href="https://portal.ifrn.edu.br/campus/canguaretama">Portal IFRN </a></li><br>
+          </ul>
+        </div>
+        <div class="final-right">
+          <h3>Desenvolvido por:</h3>
+          <ul>
+            <li>Alunos IFRN </li>
+          </ul>
+        </div>       
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
