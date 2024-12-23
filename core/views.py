@@ -6,3 +6,6 @@ def index(request):
 
 def login(request):
     return render(request, 'tela_login.html')
+
+def cadastrar(request):
+    return render(request, 'tela_cadastro.html')

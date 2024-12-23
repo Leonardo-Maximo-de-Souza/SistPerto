@@ -30,7 +30,9 @@ DEBUG = True
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['Leonardo000.pythonanywhere.com', '127.0.0.1','tela_login.html']
+DEBUG = True
+
+ALLOWED_HOSTS = ['Leonardo000.pythonanywhere.com', '127.0.0.1','tela_login.html', 'tela_cadastro.html',]
 
 
 # Application definition
