@@ -16,15 +16,18 @@
         <div class="right-login">
             <div class="card-login">
                 <h1>LOGIN</h1>
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
-                </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-                <a href="tela_inicial.html"><button class="btn-login">Login</button></a>
+                <form method="POST" action="/tela_perfil.html/">
+                    {% csrf_token %}
+                    <div class="textfield">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" id="usuario" name="login" placeholder="Usuário" required>
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                    </div>
+                    <button type="submit" class="btn-login">Entrar</button>
+                </form>
                 <a href="tela_cadastro.html"><button class="btn-login">Cadastrar</button></a>
             </div>
         </div>
