@@ -78,57 +78,66 @@ footer
   align-items: center;
   gap: 120px;
 }
+/*Fim da busca*/
 
+/* Estilo para a caixa de pesquisa */
 .searchBox {
-  transform:  translate(-50%,50%);
-  background: #2f3640;
-  margin-bottom: 60px;
-  margin-left: 70px;
-  padding: 0;
-  
-  /*Tamanho da barra de busca*/
-  height: 41px;
-  border-radius: 40px;
-  padding: 10px;
-}
-
-.searchBox:hover > .searchInput {
-  width: 200px;
-  padding: 0 5px;
-  outline: none;
-}
-
-.searchBox:hover > .searchButton {
-  background: #7ed957;
-  color : #2f3640;
-  
-}
-
-.searchButton {
-  color: #7ed957;
-  float: right;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #2f3640;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s;
-  font-weight: 700;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #2f3640; /* Fundo preto */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo do input de pesquisa */
 .searchInput {
-  border:none;
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  color: #0f0; /* Texto verde */
   background: none;
-  outline:none;
-  float:left;
-  padding: 0;
-  color: white;
-  font-size: 20px;
-  transition: 0.4s;
-  line-height: 40px;
-  width: 0px;
+  border: none;
+  outline: none;
+  caret-color: #0f0; /* Cursor verde */
+}
+
+/* Estilo do botão de pesquisa */
+.searchButton {
+  background-color: rgb(26, 181, 26); /* Fundo verde */
+  color: #000; /* Texto preto */
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchButton i {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.searchButton:hover {
+  background-color: rgb(148, 226, 148); /* Verde mais escuro no hover */
+}
+
+/* Tornar o design responsivo */
+@media (max-width: 600px) {
+  .searchBox {
+    max-width: 90%;
+  }
+  .searchInput {
+    font-size: 14px;
+  }
+  .searchButton i {
+    font-size: 14px;
+  }
 }
 
 /*Fim da busca*/
@@ -470,3 +479,4 @@ a{
     box-sizing: border-box;
   }
 }
+
