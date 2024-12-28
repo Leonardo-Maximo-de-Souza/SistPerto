@@ -25,3 +25,6 @@ def perfil(request):
 
 def cadastrar(request):
     return render(request, 'tela_cadastro.html')
+
+def itens(request):
+    return render(request, 'tela_itens.html')
