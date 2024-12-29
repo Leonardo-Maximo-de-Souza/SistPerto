@@ -2,107 +2,192 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itens</title>
-    <link rel="stylesheet" href="/static/estilo.css">
+    <title>Achados e Perdidos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 1rem 0;
+            background: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background: #45a049;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .gallery-item .info {
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .gallery-item .info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .gallery-item .info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            header, nav, footer {
+                text-align: center;
+            }
+
+            .gallery-item {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header class="navigation">
-      <div class="imagm">
-        <img src="https://ead.ifrn.edu.br/portal/wp-content/uploads/2017/04/logo_IFRN_br.png" alt="50px" height="120px">
-      </div>
-      <details class="dropdown">
-        <summary role="button">
-          <a class="button">Categorias</a>
-        </summary>
-        <ul>
-          <li><a href="#eletro">Eletrônicos</a></li>
-          <li><a href="#">Roupas</a></li>
-          <li><a href="#">Acessórios</a></li>
-          <li><a href="#">Documentos</a></li>
-        </ul>
-      </details>
-      <div class="searchBox">
-        <input class="searchInput"type="text" name="" placeholder="Procurar...">
-        <button class="searchButton" href="#">
-          <i class="material-icons">Busca</i>
-        </button>
-      </div>
-      <div>
-        <figure>
-          <a href="administração_pag/administração.html"><img src="https://cdn-icons-png.flaticon.com/512/64/64572.png" alt="20px" height="57px" class="main-profile-img" />
-          </a>
-        </figure>
-      </div>
+    <header>
+        <h1>Achados e Perdidos - IFRN</h1>
     </header>
-    <main>
-      <nav>
-        <label for="touch"><span>ULTIMOS OBJETOS</span></label>               
-        <input type="checkbox" id="touch"> 
-        <ul class="slide">
-          <li><a href="tela_itens.html">Recentes</a></li> 
-          <li><a href="old_items.html">Antigos</a></li>
-        </ul>
-      </nav>
-      <div class="caixa">
+
+    <nav>
+        <a href="#">Eletrônicos</a>
+        <a href="#">Roupas</a>
+        <a href="#">Acessórios</a>
+        <a href="#">Documentos</a>
+    </nav>
+
+    <div class="container">
+        <h2>Itens Encontrados</h2>
+        <p>Confira os itens mais recentes encontrados no campus:</p>
+
         <div class="gallery">
-          <a href="tela_detalhes.html"  id="eletro">
-            <img src="https://th.bing.com/th/id/OIP.lxiBbn0RbZQJ-NIDBM-QngHaH1?pid=ImgDet&w=1135&h=1200&rs=1" alt="#" width="600" height="400">
-          </a>
-          <div class="desc"> • Celular <br> •  Sala 71 </div>
+            <div class="gallery-item">
+                <a href="detalhes_celular.html">
+                    <img src="https://th.bing.com/th/id/OIP.doutV897topSIElGv6a4-wHaHa?w=700&h=700&rs=1&pid=ImgDetMain" alt="Celular">
+                    <div class="info">
+                        <h3>Celular</h3>
+                        <p>Data: 27/12/2024</p>
+                        <p>Hora: 14:35</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="detalhes_moletom.html">
+                    <img src="https://th.bing.com/th/id/OIP.2JdIhn5IvgXJQUXzTWN9VAHaHa?w=626&h=626&rs=1&pid=ImgDetMain" alt="Moletom">
+                    <div class="info">
+                        <h3>Moletom</h3>
+                        <p>Data: 26/12/2024</p>
+                        <p>Hora: 10:15</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="detalhes_fone.html">
+                    <img src="https://down-br.img.susercontent.com/file/sg-11134201-7qvep-li6t68kvj8ztfb" alt="Fone de Ouvido">
+                    <div class="info">
+                        <h3>Fone de Ouvido</h3>
+                        <p>Data: 25/12/2024</p>
+                        <p>Hora: 16:00</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="gallery">
-          <a href="moleton.html">
-            <img src="imagens/moleton.png" alt="moletom" width="600" height="400">
-          </a>
-          <div class="desc"> • Moletom <br> • Sala 73 </div>
-        </div>
-        <div class="gallery">
-          <a href="garrafa.html">
-            <img src="https://cdn.awsli.com.br/800x800/0/239/produto/16929094/4434932894.jpg" alt="Garrafa" width="600" height="400">
-          </a>
-          <div class="desc"> •  Garrafa <br>  • Sala 73 </div>
-        </div>
-        <div class="gallery">
-          <a href="Pendrive.html">
-            <img src="https://i.ebayimg.com/images/g/tkQAAOSwecBgVKzF/s-l400.jpg" alt="Pendrive" width="600" height="400">
-          </a>
-          <div class="desc"> • Pendrive <br> • Sala 69 </div>
-        </div>
-        <div class="gallery">
-          <a href="fone.html">
-            <img src="https://i.ebayimg.com/images/g/ZigAAOSweGVfhVWI/s-l400.jpg" alt="Fone De Ouvido" width="600" height="400">
-          </a>
-          <div class="desc"> • Fone De Ouvido <br>  • Sala 62 </div>
-        </div>
-        <div class="gallery">
-          <a href="carregador.html">
-            <img src="https://cdn.wallapop.com/images/10420/az/nd/__/c10420p664539430/i2104262185.jpg?pictureSize=W640" alt="Carregador" width="600" height="400">
-          </a>
-          <div class="desc"> • Carregador <br> • Sala 56 </div>
-        </div>
-      </div>
-    </main>
+    </div>
+
     <footer>
-      <div class="final">
-        <div>
-          <ul class="rodafeet">
-            <li class="links"><a href="https://suap.ifrn.edu.br/">Portal do SUAP </a></li><br>
-            <li class="links"><a href="https://portal.ifrn.edu.br/campus/canguaretama">Portal IFRN </a></li><br>
-          </ul>
-        </div>
-        <div class="final-right">
-          <h3>Desenvolvido por:</h3>
-          <ul>
-            <li>Joás Jordson</li>
-            <li>João Carlos</li>
-            <li>Otaciel</li>
-          </ul>
-        </div>       
-      </div>
+        <p>Desenvolvido por alunos do IFRN</p>
+        <a href="https://portal.ifrn.edu.br" style="color: #4caf50;">Portal IFRN</a>
     </footer>
-  </div>
 </body>
 </html>
