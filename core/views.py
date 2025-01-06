@@ -7,6 +7,9 @@ def index(request):
 def login(request):
     return render(request, 'tela_login.html')
 
+def detalhes(request):
+    return render(request, 'tela_detalhes.html')
+
 def perfil(request):
 
     login = request.POST['login']

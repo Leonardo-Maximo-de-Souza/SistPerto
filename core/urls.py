@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import index, login, cadastrar, perfil, itens
+from .views import index, login, cadastrar, perfil, itens, detalhes
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('tela_perfil.html/', perfil, name='perfil'),
     path('tela_login.html/tela_cadastro.html/', cadastrar, name='cadastrar'),
     path('tela_itens.html/', itens, name='itens'),
+    path('tela_detalhes.html/', detalhes, name='detalhes'),
 ]

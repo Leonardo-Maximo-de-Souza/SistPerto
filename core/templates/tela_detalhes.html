@@ -1,78 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="datalhescss.css" rel="stylesheet">
+    <title>Achados e Perdidos - Detalhes do Item</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main h1 {
+            margin-bottom: 1rem;
+            color: #4caf50;
+        }
+
+        main img {
+            max-width: 40%;
+            height: auto;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .details-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: 2rem;
+        }
+
+        .details-container h2 {
+            color: #4caf50;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 0.3rem;
+        }
+
+        .details-container p {
+            margin: 0.5rem 0;
+        }
+
+        .buttons-container {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.7rem 1.2rem;
+            margin: 0.5rem;
+            background: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #45a049;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <nav class="menu">
-                <ul>
-                    <li>
-                        <a href="tela_inicial.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="tela_cadastro.html">Cadastro</a>
-                    </li>
-                    <li>
-                        <a href="tela_perfil.html">Perfil</a>
-                    </li>
-                    <li>
-                        <a href="tela_login.html">Login</a>
-                    </li>
-                    <li>
-                        <a href="https://portal.ifrn.edu.br/campus/canguaretama">Logout</a>
-                    </li>
-                    <p class="title">ACHADOS E PERDIDOS</p>
-                </ul>
-            </nav>
-            <div class="otherpages">
-                <a href="tela_inicial.html"> HOME /</a>
-                <a href="administração_pag/administração.html"> ADMINISTRAÇÃO /</a>
-            </div>
-        </header>
-        <main>
-            <div class="objectfound">
-                <h1> Celular </h1>
-                <img src="https://th.bing.com/th/id/OIP.lxiBbn0RbZQJ-NIDBM-QngHaH1?pid=ImgDet&w=1135&h=1200&rs=1" alt="smartphone" width="600" height="340">
-            </div>
-            <div class="objectfound2">
-                <h2> Descrição: </h2>
-                <ul class="iteminfo">
-                    <li> Celular da marca Motorola, modelo MOTO G </li>
-                </ul>
-            </div>
-        </main>
-        <aside>
-            <div class="otherpages3">
-                <p> Opções </P>
-            </div>
-            <div class="otherpages2">
-                <a href="#"> Resgatar item </a>
-                <a href="administração_pag/adm_cadastro.html"> Cadastrar item </a>
-            </div>
-            <div class="table">
-                <h1> Detalhes </h1>
-                <P> Sala que foi encontrado: 71</P>
-                <p> Data que foi encontrado: 19/01/2023</p>
-                <p> Horário que foi encontrado: 15:37</p>
-                <h1> Tipo do item </h1>
-                <ul>
-                    <li> Eletrônico </li>
-                    <li> </li>
-                </ul>
-            </div>
-        </aside>
-        <footer>
-            <ul class="rodafeet">
-                <li class="links"><a href="https://suap.ifrn.edu.br/">Portal do SUAP </a></li><br>
-                <li class="links"><a href="https://portal.ifrn.edu.br/campus/canguaretama">Portal IFRN </a></li><br>
-            </ul>
-        </footer>
-    </div>
+    <header>
+        <h1>Achados e Perdidos - IFRN</h1>
+    </header>
+
+    <nav>
+        <a href="#">Eletrônicos</a>
+        <a href="#">Roupas</a>
+        <a href="#">Acessórios</a>
+        <a href="#">Documentos</a>
+    </nav>
+
+    <main>
+        <h1>Celular</h1>
+        <img src="https://th.bing.com/th/id/OIP.lxiBbn0RbZQJ-NIDBM-QngHaH1?pid=ImgDet&w=1135&h=1200&rs=1" alt="Celular">
+        
+        <div class="details-container">
+            <h2>Descrição:</h2>
+            <p>Celular da marca Motorola, modelo MOTO G.</p>
+            
+            <h2>Detalhes:</h2>
+            <p><strong>Sala:</strong> 71</p>
+            <p><strong>Data:</strong> 19/01/2023</p>
+            <p><strong>Horário:</strong> 15:37</p>
+            
+            <h2>Tipo:</h2>
+            <p>Eletrônico</p>
+        </div>
+
+        <div class="buttons-container">
+            <a href="#" class="button">Resgatar item</a>
+            <a href="administração_pag/adm_cadastro.html" class="button">Cadastrar item</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por alunos do IFRN</p>
+        <a href="https://portal.ifrn.edu.br" style="color: #4caf50;">Portal IFRN</a>
+    </footer>
 </body>
 </html>
