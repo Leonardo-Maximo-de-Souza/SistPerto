@@ -114,11 +114,28 @@
             text-align: center;
             padding: 1rem;
         }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bor
+        }
+        
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 1rem;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Achados e Perdidos - IFRN</h1>
+        <div class="header-content">
+            <a href="{% url 'index' %}"><img src="https://tse2.mm.bing.net/th?id=OIP.TFy91zo60akkYWU2G-l5EgAAAA&rs=1&pid=ImgDetMain" alt="Logo IFRN" class="logo"></a>
+            <h1>Achados e Perdidos - IFRN</h1>
+        </div>
     </header>
 
     <nav>
