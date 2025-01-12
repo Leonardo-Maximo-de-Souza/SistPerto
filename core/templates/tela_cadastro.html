@@ -142,6 +142,7 @@
     <div class="form-container">
         <h1>Crie sua conta</h1>
         <form action="#" method="POST">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="username">Usuário</label>
                 <input type="text" id="username" name="username" placeholder="admin1" required>
