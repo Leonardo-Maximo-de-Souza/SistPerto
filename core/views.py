@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Usuario
+from .forms import UsuarioForm
 
 # Create your views here.
 def index(request):
@@ -27,7 +29,14 @@ def perfil(request):
         return render(request, 'tela_login.html')
 
 def cadastrar(request):
-    return render(request, 'tela_cadastro.html')
+    form = UsuarioForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('login')
+    contexto = {
+        'form': form
+    }
+    return render(request, 'tela_cadastro.html', contexto)
 
 def itens(request):
     return render(request, 'tela_itens.html')
