@@ -24,30 +24,11 @@
 
     <div class="form-container">
         <h1>Crie sua conta</h1>
-        <form method="POST">
+        <form method="post">
             {% csrf_token %}
-
-            <!-- Campo de usuário -->
-            <div class="form-group">
-                <label for="{{ form.nome.id_for_label }}">Nome</label>
-                {{ form.nome }}
-            </div>
-
-            <!-- Campo de email -->
-            <div class="form-group">
-                <label for="{{ form.email.id_for_label }}">Email</label>
-                {{ form.email }}
-            </div>
-
-            <!-- Campo de senha -->
-            <div class="form-group">
-                <label for="{{ form.senha.id_for_label }}">Senha</label>
-                {{ form.senha }}
-            </div>
-
-            <button type="submit" class="form-button">Cadastrar</button>
-        </form>
-
+            {{ form.as_p }}
+            <button class= "form-button" type="submit">Cadastrar</button>
+        </form>        
         <div class="form-footer">
             <p>Já tem uma conta? <a href="{% url 'login' %}">Fazer login</a></p>
         </div>

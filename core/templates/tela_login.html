@@ -15,7 +15,7 @@
     </header>
 
     <nav>
-        <a href="#">Eletrônicos !!!</a>
+        <a href="#">Eletrônicos</a>
         <a href="#">Roupas</a>
         <a href="#">Acessórios</a>
         <a href="#">Documentos</a>
@@ -24,19 +24,18 @@
     <div class="container">
         <div class="login-container">
             <h2>Login</h2>
-            <form method="POST" action="/tela_perfil.html/">
+            <form method="post">
                 {% csrf_token %}
-                <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" id="usuario" name="login" placeholder="Usuário" required>
-                </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" placeholder="Senha" required>
-                </div>
-                <button type="submit" class="btn-login">Entrar</button>
-                <button type="button" class="btn-login" onclick="window.location.href='tela_cadastro.html'">Cadastrar</button>
+                <label for="email">Email:</label>
+                <input type="email" name="email" required><br>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" required><br>
+                <button class= btn-login type="submit">Login</button>
+                {% if error %}
+                <p>{{ error }}</p>
+                {% endif %}
             </form>
+            <button class= "btn-login" onclick="window.location.href='{% url 'cadastrar' %}'">Cadastrar-se</button>
         </div>
         <div class="quote">
             <h1>Há pessoas que nos roubam...<br>Há pessoas que nos devolvem.</h1>
